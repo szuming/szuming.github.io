@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://szuming.cn/blog/'
 languageCode = 'en-us'
 title = 'Dreaming'
 theme = "diary"

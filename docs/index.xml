@@ -1,0 +1,120 @@
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dreaming</title>
+    <link>http://szuming.cn/blog/</link>
+    <description>Recent content on Dreaming</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Nov 2022 09:48:13 +0800</lastBuildDate>
+    
+        <atom:link href="http://szuming.cn/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>搭建博客记录</title>
+        <link>http://szuming.cn/blog/posts/build_blog/</link>
+        <pubDate>Wed, 30 Nov 2022 09:48:13 +0800</pubDate>
+        
+        <guid>http://szuming.cn/blog/posts/build_blog/</guid>
+        <description>Dreaming http://szuming.cn/blog/posts/build_blog/ -&lt;p&gt;&lt;img src=&#34;https://mingpic-1253982367.cos.ap-shenzhen-fsi.myqcloud.com/pic/20221130095116.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;安装hugo&#34;&gt;安装Hugo&lt;/h1&gt;
+&lt;p&gt;参考 Hugo &lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;官方文档 - Quick Start&lt;/a&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; 安装 Hugo
+brew install hugo
+
+# 创建一个新的网站（本地），blog是目录名，网站所有资源都放在这个根目录下
+hugo new site blog &amp;amp;&amp;amp; cd blog
+
+# 拉取并设置主题
+git init
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+echo theme = \&amp;#34;ananke\&amp;#34; &amp;gt;&amp;gt; config.toml
+
+# 创建一篇新文章
+hugo new posts/my-first-post.md
+
+# 构建静态网站文件，并启动 HTTP 服务
+hugo server -D
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;启动后可本地访问&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mingpic-1253982367.cos.ap-shenzhen-fsi.myqcloud.com/pic/20221129193238.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;推送远端仓库&#34;&gt;推送远端仓库&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;国内使用&lt;a href=&#34;https://coding.net/&#34;&gt;coding&lt;/a&gt;作为代码仓库&lt;/li&gt;
+&lt;li&gt;国外使用&lt;a href=&#34;https://github.com/&#34;&gt;github&lt;/a&gt;作为代码仓库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd blog
+## coding
+git remote add coding git@e.coding.net:minhzzz/blog/blog.git
+## github
+git remote add github git@github.com:szuming/blog.git
+git push -u coding &amp;#34;master&amp;#34;
+git push -u github &amp;#34;master&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;服务器搭建&#34;&gt;服务器搭建&lt;/h1&gt;
+&lt;h2 id=&#34;购买腾讯云&#34;&gt;购买腾讯云&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloud.tencent.com/act/cps/redirect?redirect=2853&amp;amp;cps_key=56c72db760611c062c55541c1049b3c8&#34;&gt;【腾讯云】(2核2G 低至50元/1年)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;远程登录配置&#34;&gt;远程登录配置&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;创建密钥&lt;img src=&#34;https://mingpic-1253982367.cos.ap-shenzhen-fsi.myqcloud.com/pic/20221129195450.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置密钥&lt;img src=&#34;https://mingpic-1253982367.cos.ap-shenzhen-fsi.myqcloud.com/pic/20221129195536.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;weterm配置登录信息&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mingpic-1253982367.cos.ap-shenzhen-fsi.myqcloud.com/pic/20221129200405.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;安装git与docker&#34;&gt;安装Git与Docker&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;yum install git
+sudo yum install -y yum-utils
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;初始化配置&#34;&gt;初始化配置&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git config http.postBuffer 524288000
+git config --global credential.helper store
+git clone git@e.coding.net:minhzzz/blog/blog.git
+## 上边语句 Clone private 仓库需要输入用户名密码
+cd blog
+git pull
+## 重新拉取主题
+git submodule init
+git submodule update
+
+## 定时任务，每一分钟执行一次拉取仓库，实现实时自动更新
+echo &amp;#34;*/1 * * * * cd /usr/local/blog &amp;amp;&amp;amp; git pull&amp;#34; &amp;gt;&amp;gt; /var/spool/cron/root
+## 启动docker
+systemctl start docker
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;部署hugo容器&#34;&gt;部署Hugo容器&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker run --rm -it   -v /usr/local/blog:/src   -p 1313:1313   klakegg/hugo   server -D
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;防火墙白名单添加端口号&#34;&gt;防火墙白名单添加端口号&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://mingpic-1253982367.cos.ap-shenzhen-fsi.myqcloud.com/pic/20221129213818.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;验证网站是否成功拉起&#34;&gt;验证网站是否成功拉起&lt;/h2&gt;
+&lt;p&gt;http://43.139.210.218:1313&lt;/p&gt;
+&lt;h2 id=&#34;域名申购与绑定&#34;&gt;域名申购与绑定&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://console.cloud.tencent.com/domain/all-domain&#34;&gt;https://console.cloud.tencent.com/domain/all-domain&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;参考&#34;&gt;参考&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://panzhongxian.cn/cn/2022/10/build-personal-blog-step-by-step/&#34;&gt;老白码农在奋斗&lt;/a&gt;&lt;/p&gt;
+- http://szuming.cn/blog/posts/build_blog/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>hello喵喵</title>
+        <link>http://szuming.cn/blog/posts/hello_world/</link>
+        <pubDate>Tue, 29 Nov 2022 19:31:31 +0800</pubDate>
+        
+        <guid>http://szuming.cn/blog/posts/hello_world/</guid>
+        <description>Dreaming http://szuming.cn/blog/posts/hello_world/ -&lt;h2 id=&#34;hello-喵喵&#34;&gt;Hello 喵喵&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://mingpic-1253982367.cos.ap-shenzhen-fsi.myqcloud.com/pic/20221130094310.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+- http://szuming.cn/blog/posts/hello_world/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

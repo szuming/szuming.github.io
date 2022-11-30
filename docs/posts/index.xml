@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Dreaming</title>
+    <link>http://szuming.cn/blog/posts/</link>
+    <description>Recent content in Posts on Dreaming</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Nov 2022 09:48:13 +0800</lastBuildDate><atom:link href="http://szuming.cn/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搭建博客记录</title>
+      <link>http://szuming.cn/blog/posts/build_blog/</link>
+      <pubDate>Wed, 30 Nov 2022 09:48:13 +0800</pubDate>
+      
+      <guid>http://szuming.cn/blog/posts/build_blog/</guid>
+      <description>安装Hugo 参考 Hugo 官方文档 - Quick Start
+安装 Hugo brew install hugo # 创建一个新的网站（本地），blog是目录名，网站所有资源都放在这个根目录下 hugo new site blog &amp;amp;&amp;amp; cd blog # 拉取并设置主题 git init git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke echo theme = \&amp;#34;ananke\&amp;#34; &amp;gt;&amp;gt; config.toml # 创建一篇新文章 hugo new posts/my-first-post.md # 构建静态网站文件，并启动 HTTP 服务 hugo server -D 启动后可本地访问
+推送远端仓库 国内使用coding作为代码仓库 国外使用github作为代码仓库 cd blog ## coding git remote add coding git@e.coding.net:minhzzz/blog/blog.git ## github git remote add github git@github.com:szuming/blog.git git push -u coding &amp;#34;master&amp;#34; git push -u github &amp;#34;master&amp;#34; 服务器搭建 购买腾讯云 【腾讯云】(2核2G 低至50元/1年)</description>
+    </item>
+    
+    <item>
+      <title>hello喵喵</title>
+      <link>http://szuming.cn/blog/posts/hello_world/</link>
+      <pubDate>Tue, 29 Nov 2022 19:31:31 +0800</pubDate>
+      
+      <guid>http://szuming.cn/blog/posts/hello_world/</guid>
+      <description>Hello 喵喵 </description>
+    </item>
+    
+  </channel>
+</rss>
