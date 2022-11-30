@@ -1,10 +1,8 @@
 ---
-title: "Build_blog"
+title: "搭建博客记录"
 date: 2022-11-30T09:48:13+08:00
-draft: true
+description: "使用Hugo、腾讯云、docker搭建博客的记录"
 ---
-
-搭建我们自己的博客：hugo + 腾讯云 + docker
 
 ![](https://mingpic-1253982367.cos.ap-shenzhen-fsi.myqcloud.com/pic/20221130095116.png)
 
