@@ -1,4 +1,4 @@
-baseURL = 'http://szuming.cn/blog/'
-languageCode = 'en-us'
+baseURL = 'http://szuming.github.io/'
+languageCode = 'zh-cn'
 title = 'Dreaming'
 theme = "diary"

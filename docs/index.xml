@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dreaming</title>
-    <link>http://szuming.cn/blog/</link>
+    <link>http://szuming.github.io/</link>
     <description>Recent content on Dreaming</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Wed, 30 Nov 2022 09:48:13 +0800</lastBuildDate>
     
-        <atom:link href="http://szuming.cn/blog/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://szuming.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>搭建博客记录</title>
-        <link>http://szuming.cn/blog/posts/build_blog/</link>
+        <link>http://szuming.github.io/posts/build_blog/</link>
         <pubDate>Wed, 30 Nov 2022 09:48:13 +0800</pubDate>
         
-        <guid>http://szuming.cn/blog/posts/build_blog/</guid>
-        <description>Dreaming http://szuming.cn/blog/posts/build_blog/ -&lt;p&gt;&lt;img src=&#34;https://mingpic-1253982367.cos.ap-shenzhen-fsi.myqcloud.com/pic/20221130095116.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+        <guid>http://szuming.github.io/posts/build_blog/</guid>
+        <description>Dreaming http://szuming.github.io/posts/build_blog/ -&lt;p&gt;&lt;img src=&#34;https://mingpic-1253982367.cos.ap-shenzhen-fsi.myqcloud.com/pic/20221130095116.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;安装hugo&#34;&gt;安装Hugo&lt;/h1&gt;
 &lt;p&gt;参考 Hugo &lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;官方文档 - Quick Start&lt;/a&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; 安装 Hugo
@@ -99,20 +99,20 @@ systemctl start docker
 &lt;p&gt;&lt;a href=&#34;https://console.cloud.tencent.com/domain/all-domain&#34;&gt;https://console.cloud.tencent.com/domain/all-domain&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;参考&#34;&gt;参考&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://panzhongxian.cn/cn/2022/10/build-personal-blog-step-by-step/&#34;&gt;老白码农在奋斗&lt;/a&gt;&lt;/p&gt;
-- http://szuming.cn/blog/posts/build_blog/ - </description>
+- http://szuming.github.io/posts/build_blog/ - </description>
         </item>
     
     
     
         <item>
         <title>hello喵喵</title>
-        <link>http://szuming.cn/blog/posts/hello_world/</link>
+        <link>http://szuming.github.io/posts/hello_world/</link>
         <pubDate>Tue, 29 Nov 2022 19:31:31 +0800</pubDate>
         
-        <guid>http://szuming.cn/blog/posts/hello_world/</guid>
-        <description>Dreaming http://szuming.cn/blog/posts/hello_world/ -&lt;h2 id=&#34;hello-喵喵&#34;&gt;Hello 喵喵&lt;/h2&gt;
+        <guid>http://szuming.github.io/posts/hello_world/</guid>
+        <description>Dreaming http://szuming.github.io/posts/hello_world/ -&lt;h2 id=&#34;hello-喵喵&#34;&gt;Hello 喵喵&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://mingpic-1253982367.cos.ap-shenzhen-fsi.myqcloud.com/pic/20221130094310.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-- http://szuming.cn/blog/posts/hello_world/ - </description>
+- http://szuming.github.io/posts/hello_world/ - </description>
         </item>
     
     

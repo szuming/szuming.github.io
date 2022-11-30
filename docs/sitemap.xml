@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://szuming.cn/blog/</loc>
+    <loc>http://szuming.github.io/</loc>
     <lastmod>2022-11-30T09:48:13+08:00</lastmod>
   </url><url>
-    <loc>http://szuming.cn/blog/posts/</loc>
+    <loc>http://szuming.github.io/posts/</loc>
     <lastmod>2022-11-30T09:48:13+08:00</lastmod>
   </url><url>
-    <loc>http://szuming.cn/blog/posts/build_blog/</loc>
+    <loc>http://szuming.github.io/posts/build_blog/</loc>
     <lastmod>2022-11-30T09:48:13+08:00</lastmod>
   </url><url>
-    <loc>http://szuming.cn/blog/posts/hello_world/</loc>
+    <loc>http://szuming.github.io/posts/hello_world/</loc>
     <lastmod>2022-11-29T19:31:31+08:00</lastmod>
   </url><url>
-    <loc>http://szuming.cn/blog/categories/</loc>
+    <loc>http://szuming.github.io/categories/</loc>
   </url><url>
-    <loc>http://szuming.cn/blog/tags/</loc>
+    <loc>http://szuming.github.io/tags/</loc>
   </url>
 </urlset>

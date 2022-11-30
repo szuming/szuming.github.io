@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Dreaming</title>
-    <link>http://szuming.cn/blog/tags/</link>
+    <link>http://szuming.github.io/tags/</link>
     <description>Recent content in Tags on Dreaming</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://szuming.cn/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language><atom:link href="http://szuming.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
